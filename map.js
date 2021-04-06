@@ -8,5 +8,5 @@ const map = (list, callback) => {
   return outputArr;
 };
 
-const result = map([1, 2, 3], (nb) => nb * nb);
+const result = map([1, 2, 3], (nb) => nb % 2);
 console.log(result);

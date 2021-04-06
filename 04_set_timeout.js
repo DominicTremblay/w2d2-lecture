@@ -9,6 +9,8 @@ const displayLater = (callback) => {
 
 
   console.log('AFTER CALL', pet); 
+  
+  return pet;
 
 };
 
