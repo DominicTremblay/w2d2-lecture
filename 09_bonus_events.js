@@ -5,11 +5,11 @@ const eventEmitter = new events.EventEmitter();
 
 // adding events and adding a callback
 eventEmitter.on('connect', (event) => {
-  console.log('Hello Monkey 🐵');
+  console.log('Hello Bob 🧑');
 });
 
 eventEmitter.on('eat', (event) => {
-  console.log('I am eating! 🌮🌮🌮');
+  console.log('I am eating! 🍣🍣🍣');
 });
 
 eventEmitter.on('sleep', (event) => {

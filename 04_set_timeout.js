@@ -1,18 +1,16 @@
 const displayLater = (callback) => {
-  let pet = '🐱';
-  console.log('BEFORE CALL: ', pet);
+
+  let sushi = '🍣';
+  console.log('BEFORE CALL: ', sushi);
 
   setTimeout(() => {
-    pet = '🐶';
-    callback(pet);
+    sushi = '🐠';
+    callback(sushi);
   }, 3000);
 
-
-  console.log('AFTER CALL', pet); 
-
+  console.log('AFTER CALL', sushi);
 };
 
-// What is the content of result?
+displayLater((sushi) => console.log('INSIDE CALL: ', sushi));
 
-const result = displayLater((pet) => console.log('INSIDE CALL: ', pet));
-console.log(result);
+// What will be the order of the console.logs? what will it print out?

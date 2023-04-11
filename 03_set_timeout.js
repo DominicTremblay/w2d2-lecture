@@ -1,16 +1,13 @@
 const displayLater = (callback) => {
+  console.log('BEFORE CALL: 🐟🍚'); // synchronous
 
-  let pet = '🐱';
-  console.log('BEFORE CALL: ', pet);
+  // setTimout is executed. Synchronous. callback is async (after 3 sec.)
+  setTimeout(()=> callback(), 3000); // this is asynchronous
 
-  setTimeout(() => {
-    pet = '🐶';
-    callback(pet);
-  }, 3000);
-
-  console.log('AFTER CALL', pet);
+  console.log('AFTER CALL: 🍣🍣🍣'); // synchronous
 };
 
-displayLater((pet) => console.log('INSIDE CALL: ', pet));
+displayLater(() => console.log('INSIDE CALL: 🥵'))
 
 // What will be the order of the console.logs?
+
