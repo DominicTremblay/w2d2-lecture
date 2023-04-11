@@ -32,37 +32,10 @@ const ingredients = [
   },
 ];
 
+// starting the timer
 const startTime = Date.now();
 
-const updateTimer = function (time, ingredient) {
-  ingredient.endTime = time;
-};
-
-const longestPrepTime = function (ingredients) {
-  const prepTimeDesc = ingredients.sort((a, b) => b.prep_time - a.prep_time);
-  return prepTimeDesc[0];
-};
-
-const areWeDone = function (ingredient, ingredients) {
-  if (ingredient.name === longestPrepTime(ingredients).name) {
-    const prepTime = ingredient.endTime - startTime;
-
-    console.log(`It took ${prepTime} ms to prepare the ingredients`);
-  }
-};
-
-const makeSushiRolls = function () {
-  for (let ingredient of ingredients) {
-    setTimeout(() => {
-      // Prepare ingredient
-      console.log(ingredient.prep_message);
-      // Simulate synchronous delay for ingredient preparation
-      // wait(ingredient.prep_time);
-      console.log(ingredient.ready_message);
-      updateTimer(Date.now(), ingredient);
-      areWeDone(ingredient, ingredients);
-    }, ingredient.prep_time);
-  }
-};
+// Prepare all the ingredients asynchronously
+const makeSushiRolls = function () {};
 
 makeSushiRolls();

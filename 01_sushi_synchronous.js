@@ -32,24 +32,18 @@ const ingredients = [
   },
 ];
 
+// Starting the timer
 const startTime = Date.now();
 
+// helper function to simulate a waiting time
 const wait = function (ms) {
   console.log(`It takes ${ms} miliseconds to prepare`);
   const start = new Date().getTime();
   while (new Date().getTime() - start < ms);
 };
 
-const makeSushiRollsSync = function () {
-  for (let ingredient of ingredients) {
-    // Prepare ingredient
-    console.log(ingredient.prep_message);
-    // Simulate synchronous delay for ingredient preparation
-    wait(ingredient.prep_time);
-    console.log(ingredient.ready_message);
-  }
-
-  console.log(`it took ${Date.now() - startTime} ms to prepare`);
+const makeSushiRollsSync = function (ingredients) {
+  
 };
 
-makeSushiRollsSync();
+makeSushiRollsSync(ingredients);

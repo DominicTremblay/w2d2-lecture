@@ -1,12 +1,11 @@
+// Let's create a map function
+// a map function applies a transformation to the elements of an array and returns a new array
+
 const map = (list, callback) => {
-  const outputArr = [];
 
-  for (const element of list) {
-    outputArr.push(callback(element));
-  }
-
-  return outputArr;
 };
 
-const result = map([1, 2, 3], (nb) => nb * nb);
-console.log(result);
+
+const result = map();
+
+console.log(result)
