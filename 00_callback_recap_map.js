@@ -3,9 +3,20 @@
 
 const map = (list, callback) => {
 
+  const output = [];
+
+  for (let item of list) {
+    output.push(callback(item))
+  }
+
+  return output;
+  
+
 };
 
 
-const result = map();
+// [1,2,3,4,5] => f(x) => [2,4,6,8,10]
+
+const result = map([1,2,3,4,5], (item) => item * 2 );
 
 console.log(result)

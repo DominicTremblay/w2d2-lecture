@@ -4,5 +4,12 @@
 
 const displayLater = (callback) => {
 
+  // have the operation take 3 secs to accomplish
+  setTimeout(() => {
+
+    callback();
+
+  }, 3000)
+
 };
-displayLater();
+displayLater(() => console.log(`Thank you for shopping at Bob's sushis 🍣`));
