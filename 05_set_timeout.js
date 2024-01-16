@@ -9,6 +9,7 @@ const displayLater = (callback) => {
   }, 3000);
 
   console.log('AFTER CALL', sushi);
+  return;
 };
 // What is the content of result?
 

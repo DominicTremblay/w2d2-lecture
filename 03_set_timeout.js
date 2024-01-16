@@ -1,10 +1,10 @@
 const displayLater = (callback) => {
-  console.log('BEFORE CALL: 🐟🍚'); // synchronous
+  console.log('BEFORE CALL: 🐟🍚');
 
-  // setTimout is executed. Synchronous. callback is async (after 3 sec.)
-  setTimeout(()=> callback(), 3000); // this is asynchronous
 
-  console.log('AFTER CALL: 🍣🍣🍣'); // synchronous
+  // setTimeout(()=> callback(), 3000); 
+
+  console.log('AFTER CALL: 🍣🍣🍣');
 };
 
 displayLater(() => console.log('INSIDE CALL: 🥵'))

@@ -43,7 +43,16 @@ const wait = function (ms) {
 };
 
 const makeSushiRollsSync = function (ingredients) {
-  
+  for (let ingredient of ingredients) {
+    console.log(ingredient.prep_message);
+
+    console.log(ingredient.prep_message);
+    wait(ingredient.prep_time);
+
+    console.log(ingredient.ready_message);
+  }
+
+  console.log(`it took ${Date.now() - startTime} ms`);
 };
 
 makeSushiRollsSync(ingredients);

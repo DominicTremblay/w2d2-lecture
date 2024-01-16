@@ -32,10 +32,37 @@ const ingredients = [
   },
 ];
 
+const longestTimeIng = ingredients.sort((ing1, ing2) => ing2 - ing1)[0];
+
 // starting the timer
 const startTime = Date.now();
 
-// Prepare all the ingredients asynchronously
-const makeSushiRolls = function () {};
+const longestPrepTime = ingredients.sort((ing1, ing2) => ing2.prep_time - ing1.prep_time)[0];
 
-makeSushiRolls();
+
+// Prepare all the ingredients asynchronously
+const makeSushiRolls = function (ingredients) {
+
+  // let totalTime = 0;
+
+  for (let ingredient of ingredients) {
+    console.log(ingredient.prep_message);
+
+    setTimeout(() => {
+      console.log(ingredient.ready_message);
+      // totalTime += ingredient.prep_time;
+
+      if(longestPrepTime.name === ingredient.name) {
+        console.log(`it took ${Date.now() - startTime} ms`)
+      }
+    }, ingredient.prep_time);
+
+
+
+
+  }
+
+  // console.log("total:", totalTime);
+};
+
+makeSushiRolls(ingredients);
